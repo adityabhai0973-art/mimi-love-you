@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mansi ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#120812;
+    color:white;
+}
+
+.page{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    background:
+      radial-gradient(circle at top,#5d234d 0%,transparent 45%),
+      radial-gradient(circle at bottom,#28102d 0%,#120812 65%);
+}
+
+.page.active{
+    display:flex;
+    animation:fade .7s ease;
+}
+
+.content{
+    width:min(90%,520px);
+}
+
+.small{
+    font-size:14px;
+    letter-spacing:3px;
+    opacity:.75;
+    text-transform:uppercase;
+}
+
+h1{
+    font-size:clamp(38px,10vw,70px);
+    margin:18px 0;
+    line-height:1.05;
+}
+
+h2{
+    font-size:clamp(30px,7vw,48px);
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.heart{
+    font-size:75px;
+    animation:beat 1.3s infinite;
+}
+
+button{
+    border:0;
+    padding:14px 28px;
+    margin:25px 7px 0;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.next{
+    background:#ff5c93;
+    color:white;
+    box-shadow:0 8px 30px #ff5c9360;
+}
+
+.back{
+    background:#ffffff15;
+    color:white;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+.highlight{
+    color:#ff82aa;
+}
+
+.card{
+    background:#ffffff0d;
+    border:1px solid #ffffff18;
+    border-radius:25px;
+    padding:28px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 60px #0006;
+}
+
+.quote{
+    font-size:23px;
+    line-height:1.6;
+}
+
+.yes{
+    background:#ff4f91;
+    color:white;
+    font-size:18px;
+    padding:16px 42px;
+}
+
+.maybe{
+    background:#ffffff12;
+    color:white;
+}
+
+#final h1{
+    font-size:clamp(42px,11vw,78px);
+}
+
+.sparkle{
+    position:fixed;
+    pointer-events:none;
+    animation:fall linear infinite;
+    opacity:.7;
+}
+
+@keyframes fade{
+    from{opacity:0;transform:translateX(30px)}
+    to{opacity:1;transform:translateX(0)}
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.15)}
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active">
+    <div class="content">
+        <div class="heart">❤️</div>
+        <div class="small">A little something for</div>
+        <h1>Mansi</h1>
+        <p>
+            I made this little place on the internet
+            because there are some things I wanted
+            to say to you...
+        </p>
+        <button class="next" onclick="nextPage()">Open it ✨</button>
+    </div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page">
+    <div class="content card">
+        <div class="small">Page 01</div>
+        <h2>It started so simply...</h2>
+        <p>
+            Kab tum meri life ka itna special part ban gayi,
+            honestly mujhe khud nahi pata.
+            Bas dheere-dheere tumse baat karna,
+            tumhe sunna aur tumhare saath time spend karna
+            mujhe genuinely special lagne laga.
+        </p>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">Next →</button>
+    </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page">
+    <div class="content">
+        <div class="small">Page 02</div>
+        <h2>You became <span class="highlight">special</span></h2>
+
+        <div class="card">
+            <p class="quote">
+                "Some people enter your life quietly,
+                and somehow become the person
+                you don't want to lose."
+            </p>
+        </div>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">Next →</button>
+    </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page">
+    <div class="content card">
+        <div class="small">Page 03</div>
+        <h2>What I feel...</h2>
+
+        <p>
+            Tumhare saath mujhe kuch prove karne ki
+            zarurat feel nahi hoti.
+            I can just be myself.
+            Aur shayad isi wajah se,
+            tum mere liye aur bhi zyada special ho gayi.
+        </p>
+
+        <br>
+
+        <p>
+            I don't just like talking to you...
+            <br>
+            <span class="highlight">I genuinely care about you.</span>
+        </p>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">Next →</button>
+    </div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page">
+    <div class="content">
+        <div class="heart">🫶</div>
+        <div class="small">Page 04</div>
+        <h2>One honest confession...</h2>
+
+        <div class="card">
+            <p>
+                I've tried putting this feeling into words,
+                but every time it feels like words are
+                not enough.
+                <br><br>
+                So I'll just say it honestly...
+            </p>
+        </div>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">Tell me ❤️</button>
+    </div>
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page">
+    <div class="content">
+        <div class="small">My confession</div>
+
+        <h1>
+            I love you,<br>
+            <span class="highlight">Mansi.</span> ❤️
+        </h1>
+
+        <p>
+            Not because I expect anything from you,
+            but because that's simply what my heart
+            feels when it comes to you.
+        </p>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">One last thing...</button>
+    </div>
+</section>
+
+
+<!-- PAGE 7 -->
+<section class="page">
+    <div class="content card">
+        <div class="small">And now...</div>
+
+        <h2>
+            I have just one question.
+        </h2>
+
+        <p>
+            Will you let me be someone
+            who stays beside you,
+            makes you smile,
+            listens to you,
+            and keeps choosing you?
+        </p>
+
+        <button class="back" onclick="prevPage()">Back</button>
+        <button class="next" onclick="nextPage()">The question ❤️</button>
+    </div>
+</section>
+
+
+<!-- FINAL PAGE -->
+<section class="page" id="final">
+    <div class="content">
+        <div class="heart">❤️</div>
+
+        <div class="small">Mansi...</div>
+
+        <h1>
+            Will you<br>
+            <span class="highlight">be mine?</span>
+        </h1>
+
+        <p>
+            No pressure. Just an honest question
+            from an honest heart. 🫂
+        </p>
+
+        <button class="yes" onclick="yesClicked()">YES ❤️</button>
+        <button class="maybe" onclick="maybeClicked()">Let me think 🥹</button>
+
+        <br>
+
+        <button class="back" onclick="prevPage()">← Back</button>
+    </div>
+</section>
+
+
+<!-- YES SCREEN -->
+<section class="page" id="yesPage">
+    <div class="content">
+        <div class="heart">🥹❤️</div>
+
+        <h1>Thank you, Mansi.</h1>
+
+        <p>
+            Maybe this little website will become
+            one of those memories we smile about later.
+            <br><br>
+            And yes...
+            <span class="highlight">I really meant every word.</span>
+        </p>
+
+        <button class="next" onclick="location.reload()">
+            Read it again ✨
+        </button>
+    </div>
+</section>
+
+
+<script>
+
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+
+function showPage(index){
+
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+    pages[index].classList.add("active");
+}
+
+function nextPage(){
+
+    if(currentPage < pages.length - 2){
+        currentPage++;
+        showPage(currentPage);
+    }
+}
+
+function prevPage(){
+
+    if(currentPage > 0){
+        currentPage--;
+        showPage(currentPage);
+    }
+}
+
+function yesClicked(){
+
+    currentPage = pages.length - 1;
+    showPage(currentPage);
+
+    createHearts();
+}
+
+function maybeClicked(){
+
+    alert("Take your time... ❤️");
+}
+
+function createHearts(){
+
+    for(let i=0;i<35;i++){
+
+        const heart = document.createElement("div");
+
+        heart.className = "sparkle";
+        heart.innerHTML = ["❤️","💗","💕","✨","🌷"][Math.floor(Math.random()*5)];
+
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.fontSize = (15 + Math.random()*25) + "px";
+        heart.style.animationDuration = (3 + Math.random()*5) + "s";
+        heart.style.animationDelay = Math.random()*2 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },8000);
+    }
+}
+
+</script>
+
+</body>
+  </html>
